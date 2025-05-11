@@ -4,26 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>💬 MiniChat</title>
-
-  <!-- Estilos externos -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Contenedor del chat -->
-  <div class="chat-container">
-    <h1>💬 MiniChat</h1>
+  <!-- Barra superior -->
+  <header class="header">
+    <div class="header-left">
+      <button id="menu-toggle" class="menu-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1>Chats</h1>
+    </div>
+    <div class="header-right">
+      <button class="btn-green">+</button>
+    </div>
+  </header>
 
-    <!-- Zona de mensajes -->
-    <div id="chat-box"></div>
+  <!-- Lista de chats -->
+  <section class="chat-list">
+    <ul id="chats-list">
+      <!-- Los chats se cargarán aquí dinámicamente -->
+    </ul>
+  </section>
 
-    <!-- Formulario para enviar mensaje -->
-    <form id="chat-form">
-      <input type="text" id="username" placeholder="Tu nombre" required minlength="2" />
-      <input type="text" id="message" placeholder="Escribe un mensaje..." required />
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
+  <!-- Contenedor principal del chat -->
+  <main class="chat-main">
+    <div class="chat-container">
+      <h1>💬 MiniChat</h1>
+
+      <!-- Selector de grupo -->
+      <label for="group-select">Selecciona un grupo:</label>
+      <select id="group-select">
+        <option value="general">💬 General</option>
+        <option value="amigos">👥 Amigos</option>
+      </select>
+
+      <!-- Zona de mensajes -->
+      <div id="chat-box"></div>
+
+      <!-- Formulario para enviar mensaje -->
+      <form id="chat-form">
+        <input type="text" id="username" placeholder="Tu nombre" required minlength="2" />
+        <input type="text" id="message" placeholder="Escribe un mensaje..." required />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
 
   <!-- Carga de scripts -->
   <script type="module" src="chat.js"></script>
