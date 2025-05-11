@@ -2,16 +2,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>💬 MiniChat</title>
+
+  <!-- Estilos externos -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Contenedor del chat -->
   <div class="chat-container">
     <h1>💬 MiniChat</h1>
-    
+
+    <!-- Zona de mensajes -->
     <div id="chat-box"></div>
 
+    <!-- Formulario para enviar mensaje -->
     <form id="chat-form">
       <input type="text" id="username" placeholder="Tu nombre" required minlength="2" />
       <input type="text" id="message" placeholder="Escribe un mensaje..." required />
@@ -19,24 +25,7 @@
     </form>
   </div>
 
-  <!-- Firebase SDK -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js ";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-analytics.js ";
-    const firebaseConfig = {
-      apiKey: "AIzaSyCh1nzOB7Zx3lPz5Ga-riPtXZLVS-kf80",
-      authDomain: "minichat-c2837.firebaseapp.com",
-      projectId: "minichat-c2837",
-      storageBucket: "minichat-c2837.firebasestorage.app",
-      messagingSenderId: "639801347073",
-      appId: "1:639801347073:web:629e24f2bc784fbfa48400",
-      measurementId: "G-7SMPYYBPJ3"
-    };
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
-
-  <!-- Tu JS -->
-  <script src="chat.js" type="module"></script>
+  <!-- Carga de scripts -->
+  <script type="module" src="chat.js"></script>
 </body>
 </html>
